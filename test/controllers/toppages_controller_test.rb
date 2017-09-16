@@ -8,13 +8,13 @@ class ToppagesControllerTest < ActionDispatch::IntegrationTest
   end
   
   test "should get acoount" do
-    get toppages_account_url
+    get account_url
     assert_response :success
     assert_select "title", "Account | ICApp"
   end
   
   test "should get about" do
-    get toppages_about_url
+    get about_url
     assert_response :success
     assert_select "title", "About | ICApp"
   end
