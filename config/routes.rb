@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get '/about', to: 'toppages#about'
   get '/account', to: 'toppages#account'
   get 'signup', to: 'users#new'
-  resources :users, only: [:show, :create, :edit, :update, :destroy]
+  post 'signup', to: "users#create"
+  resources :users, only: [:show, :edit, :update, :destroy]
 end

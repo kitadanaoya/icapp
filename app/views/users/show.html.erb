@@ -1,0 +1,18 @@
+<% provide(:title, @user.name) %>
+
+<div class="row">
+  <side class="col-xs-4 text-center">
+    <div>
+      <%= gravatar_for @user %>
+    </div>
+    <ul>
+      <li><%= @user.name %></li>
+      <li><%= @user.email %></li>
+    </ul>
+  </side>
+  
+  <div class="col-xs-8">
+    <p>ここになんか結果が表示されるようにします</p>
+  </div>
+
+</div>

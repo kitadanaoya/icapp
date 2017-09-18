@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     end
     
     def new
-      @user = User.new(params[:id])
+      @user = User.new
     end
     
     def create
@@ -13,8 +13,7 @@ class UsersController < ApplicationController
          flash[:success] = "アカウントの作成に成功しました！"
          redirect_to @user
       else
-        flash.now[:danger] = "アカウントの作成に失敗しました！"
-        render signup_path
+        render 'new'
       end
     end
     
