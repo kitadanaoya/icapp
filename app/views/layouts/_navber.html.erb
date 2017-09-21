@@ -18,13 +18,15 @@
         <li><a href="/about">ABOUT</a></li>
       </ul>
       
-<% if false %>
-      <% if ### %>
-        <p class="navbar-text navbar-right">ようこそ<%= @user.name %>さん</p>
+
+      <% if logged_in? %>
+        <ul class="navbar-text navbar-right">
+          <li>ようこそ<%= link_to "○○さん", user_path(current_user) %></li>
+          <li><%= link_to "Log out", logout_path, method: :delete %></li>
+        </ul>
       <% else %>
         <p class="navbar-text navbar-right">ようこそ、ゲストさん。</p>
       <% end %>
-<% end %>
     </div>
   </div>
 </nav>
