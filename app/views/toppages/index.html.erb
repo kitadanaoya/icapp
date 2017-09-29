@@ -5,7 +5,13 @@
     <h1>さあ！自分がしたいアクションを見つけよう！</h1>
     <p>回答時間目安：1分</p>
     
-    <p class="text-center">IT WILL SHOW FORM TO ANSWER HERE.</p>
+    <div>
+      <% if logged_in? %>
+        <!-- formを表示する -->
+      <% else %>
+        <!-- Loginボタンを表する　つまり下のやつを表示する　-->
+      <% end %>
+    </div>
     
     
     <!-- 本当はアラートでSign　Up機能を強制的に表示したい -->

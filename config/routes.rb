@@ -11,4 +11,9 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
+  
+  get 'mkinq', to: 'points#new'
+  post 'mkinq', to: 'points#create'
+  delete 'dlinq', to: 'points#destroy'
+  resources :points, only: [:index, :show, :edit, :update]
 end

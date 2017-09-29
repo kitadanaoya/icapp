@@ -13,6 +13,7 @@ class UsersController < ApplicationController
          flash[:success] = "アカウントの作成に成功しました！"
          redirect_to @user
       else
+        flash.now[:danger] = "アカウントの作成に失敗しました。もう一度お試しください"
         render 'new'
       end
     end
