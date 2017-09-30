@@ -3,6 +3,7 @@ class PointsController < ApplicationController
   end
 
   def show
+    @point = Point.find(params[:id])
   end
 
   def new

@@ -17,7 +17,7 @@ class PointTest < ActiveSupport::TestCase
     assert_not @point.valid?
   end
   
-  test "point should be present" do
+  test "tokuten should be present" do
     @point.tokuten = ""
     assert_not @point.valid?
   end
