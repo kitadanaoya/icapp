@@ -13,7 +13,7 @@ class PointsController < ApplicationController
   def create
     @point = Point.new(point_params)
     if @point.save
-      flash[:success] = "You can see recommendations!"
+      flash[:success] = "Answerを作成しました。"
       redirect_to @point
     else
       flash.now[:danger] = "Something Wrong, Pls try again"
@@ -23,6 +23,6 @@ class PointsController < ApplicationController
   
   private 
   def point_params
-    params.require(:point).permit(:content, :tokuten)
+    params.permit(:content, :tokuten)
   end
 end

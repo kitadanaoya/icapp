@@ -1,2 +1,22 @@
-<h1>Points#show</h1>
-<p>Find me in app/views/points/show.html.erb</p>
+<% provide(:title, "作成したInq") %>
+<div class="row">  
+  <div class="col-md-offset-3 col-md-6 inqexp">
+    <table>
+    <tbody>
+      <tr>
+        <th>Inq</th>
+        <td><%= @point.content %></td>
+      </tr>
+      <tr>
+        <th>特典 </th>
+        <td><%= @point.tokuten %></td>
+      </tr>
+    </tbody>
+    </table>
+    
+    <div>
+      <%= link_to "編集", edit_point_path, class: "btn btn-success" %>
+      <%= link_to "削除", dlinq_path, class: "btn btn-danger" %>
+    </div>
+  </div>
+</div>

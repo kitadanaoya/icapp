@@ -39,6 +39,11 @@ ul {
   padding-top: 1.5%;
 }
 
+/* table */
+th {
+  padding-right: 2em;
+}
+
 
 /* gravatar */
 .gravatar {
@@ -59,4 +64,13 @@ ul {
 /* toppage content */
 #login {
  margin-bottom: 1.5%; 
+}
+
+
+/*inq*/
+.inqexp {
+  background-color: #fff;
+  border: solid 1px #bbb;
+  box-shadow: #ccc 1px 1px 1px;
+  padding: 2%;
 }

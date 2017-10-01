@@ -1,7 +1,20 @@
-<% provide(:title, "Answerを作る") %>
+<% provide(:title, "Inqを作る") %>
 
 <div class="row">
   <div class="col-md-offset-3 col-md-6">
-    
+    <%= form_for(:point) do |f| %>
+      
+      <div class="form-group">
+        <%= f.label :content, "CheckBoxに表示する内容" %>
+        <%= f.text_area :content, class: "form-control", rows: 7 %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :tokuten, "点数" %>
+        <%= f.number_field :tokuten, class: "form-control" %>
+      </div>
+      
+      <%= f.submit "作成", class: "btn btn-block btn-primary" %>
+    <% end %>
   </div>
 </div>
