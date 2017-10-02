@@ -1,5 +1,6 @@
 class PointsController < ApplicationController
   def index
+    @points = Point.all
   end
 
   def show
@@ -22,7 +23,8 @@ class PointsController < ApplicationController
   end
   
   private 
+  #なんかErrorになる。.require(:point)を消せば直る。でもそしたらデータが格納されなくなる。
   def point_params
-    params.permit(:content, :tokuten)
+    params.require(:point).permit(:content, :tokuten)
   end
 end
