@@ -74,3 +74,7 @@ th {
   box-shadow: #ccc 1px 1px 1px;
   padding: 2%;
 }
+
+.checkbox-wrap {
+  display: block;
+}

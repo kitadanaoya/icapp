@@ -4,16 +4,18 @@
   <div class="jumbotron">
     <h1>さあ！自分がしたいアクションを見つけよう！</h1>
     <p>回答時間目安：1分</p>
-    
-    <div>
-      <% if logged_in? %>
+    <% if logged_in? %>
         <!-- formを表示する -->
-      <% else %>
-        <!-- Loginボタンを表する　つまり下のやつを表示する　-->
-      <% end %>
-    </div>
-    
-    
+        <%= form_for(@qstgroup) do |f| %>
+          <%= f.collection_check_boxes(:point, :point_ids, Point.all, :tokuten, :content) do |b| %>
+            <div class="checkbox-wrap">
+              <%= b.label { b.check_box + b.text } %>
+            </div>
+          <% end %>
+          
+          <%= f.submit "送信", class: "btn btn-primary btn-block" %>
+        <% end %>
+    <% else %>    
     <!-- 本当はアラートでSign　Up機能を強制的に表示したい -->
     <div class="row">
       <div class="text-center col-md-offset-4 col-md-4" id="login">
@@ -24,4 +26,6 @@
         <%= link_to "Sign Up Now", signup_path, class: "btn btn-lg btn-info btn-block" %>
       </div>
     </div>
+    
+    <% end %>
 </div>
