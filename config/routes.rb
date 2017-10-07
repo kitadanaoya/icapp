@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "toppages#index"
   get '/about', to: 'toppages#about'
@@ -16,4 +15,6 @@ Rails.application.routes.draw do
   post 'mkinq', to: 'points#create'
   delete 'dlinq', to: 'points#destroy'
   resources :points, only: [:index, :show, :edit, :update]
+  
+  resources :user_points, only: [:index, :show, :destroy]
 end

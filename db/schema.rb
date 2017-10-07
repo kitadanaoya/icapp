@@ -10,13 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170924091439) do
+ActiveRecord::Schema.define(version: 20171007140932) do
 
   create_table "points", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "content"
     t.integer "tokuten"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sums", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "point_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["point_id"], name: "index_sums_on_point_id"
+    t.index ["user_id"], name: "index_sums_on_user_id"
+  end
+
+  create_table "user_points", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "point_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["point_id"], name: "index_user_points_on_point_id"
+    t.index ["user_id"], name: "index_user_points_on_user_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -27,4 +45,8 @@ ActiveRecord::Schema.define(version: 20170924091439) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "sums", "points"
+  add_foreign_key "sums", "users"
+  add_foreign_key "user_points", "points"
+  add_foreign_key "user_points", "users"
 end
