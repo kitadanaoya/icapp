@@ -1,7 +1,7 @@
 <% provide(:title, @user.name) %>
 
 <div class="row">
-  <side class="col-xs-4 text-center">
+  <side class="col-xs-4 text-center col-md-3">
     <div>
       <%= gravatar_for @user %>
     </div>
@@ -11,8 +11,7 @@
     </ul>
   </side>
   
-  <div class="col-xs-8">
-    <p>ここになんか結果が表示されるようにします</p>
+  <div class="col-xs-8 col-md-9">
     <%= @user.point_ids %>
     <%= sum_for @user %>
   </div>

@@ -22,6 +22,10 @@ ul {
   list-style-position: inside
 }
 
+.rounded {
+ border-radius: 5em; 
+}
+
 
 /* nav */
 .navbar {
@@ -77,4 +81,33 @@ th {
 
 .checkbox-wrap {
   display: block;
+}
+
+
+
+
+/* users#show */
+table tbody tr th {
+ width: 15%; 
+ text-align: right;
+}
+
+table tbody tr th, table tbody tr td{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.syokai-zentai {
+  margin-top: 2em;
+}
+
+.syokai {
+  display: flex;
+  padding-right: 1em;
+}
+
+.syokai-con {
+ padding: 1.5%;
+ background-color: #fff;
+ margin-bottom: 2em;
 }
