@@ -15,8 +15,7 @@ Rails.application.routes.draw do
   
   get 'mkinq', to: 'points#new'
   post 'mkinq', to: 'points#create'
-  delete 'dlinq', to: 'points#destroy'
-  resources :points, only: [:index, :show, :edit, :update]
+  resources :points, only: [:index, :show, :edit, :update, :destroy]
   
   resources :user_points, only: [:index, :show, :destroy]
 end

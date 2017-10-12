@@ -111,3 +111,14 @@ table tbody tr th, table tbody tr td{
  background-color: #fff;
  margin-bottom: 2em;
 }
+
+.syokai a:hover { 
+  text-decoration: none;
+}
+
+
+.icon {
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}
