@@ -55,4 +55,3 @@ production:
   database: icapp_production
   username: icapp
   password: <%= ENV['ICAPP_DATABASE_PASSWORD'] %>
-  socket: <%= socket_locations.detect { |f| File.exists?(f) } %>
