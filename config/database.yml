@@ -54,3 +54,4 @@ production:
   database: icapp_production
   username: icapp
   password: <%= ENV['ICAPP_DATABASE_PASSWORD'] %>
+  socket: /var/run/mysqld/mysqld.sock
