@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171013153002) do
+ActiveRecord::Schema.define(version: 20171013154229) do
 
   create_table "points", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "content"
@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 20171013153002) do
     t.bigint "point_ids_id"
     t.bigint "point_id_id"
     t.integer "point_ids"
+    t.bigint "point_id"
+    t.index ["point_id"], name: "index_users_on_point_id"
     t.index ["point_id_id"], name: "index_users_on_point_id_id"
     t.index ["point_ids_id"], name: "index_users_on_point_ids_id"
   end
@@ -54,4 +56,5 @@ ActiveRecord::Schema.define(version: 20171013153002) do
   add_foreign_key "sums", "users"
   add_foreign_key "user_points", "points"
   add_foreign_key "user_points", "users"
+  add_foreign_key "users", "points"
 end
