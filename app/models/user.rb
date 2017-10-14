@@ -8,6 +8,7 @@ class User < ApplicationRecord
     validates :password, presence: true, length: { minimum: 6 } 
     has_many :user_points
     has_many :points, through: :user_points#, join_table: :users
+    serialize :point_ids, Array
     
     def User.digest(string)
       cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
