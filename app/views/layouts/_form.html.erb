@@ -1,9 +1,9 @@
-        <%= form_for(@user) do |f| %>
-          <%= collection_check_boxes(:user, :point_ids, Point.all, :tokuten, :content) do |b| %>
+    <div class="form-group">
+      <%= collection_check_boxes(:user, :point_ids, Point.all, :id, :content) do |b| %>
             <div class="checkbox-wrap">
               <%= b.label { b.check_box + b.text } %>
             </div>
-          <% end %>
+      <% end %>
+    </div>
           
-          <%= f.submit "送信", class: "btn btn-primary" %>
-        <% end %>
+        

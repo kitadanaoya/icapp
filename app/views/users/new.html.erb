@@ -31,14 +31,7 @@
       <%= f.password_field :password_confirmation, class: "form-control" %>
     </div>
     
-    <div class="form-group">
-      <%= hidden_field_tag "role[user[point_ids]][]", '' %>
-      <%= collection_check_boxes(:user, :point_ids, Point.all, :id, :content) do |b| %>
-            <div class="checkbox-wrap">
-              <%= b.label { b.check_box + b.text } %>
-            </div>
-      <% end %>
-    </div>
+    <%= render 'layouts/form' %>
     
     <%= f.submit "Create My Account", class: "btn btn-primary btn-block" %>
   <% end %>
