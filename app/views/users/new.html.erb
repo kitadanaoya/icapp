@@ -32,8 +32,8 @@
     </div>
     
     <div class="form-group">
-      <%= collection_check_boxes(:user, :point_ids, Point.all, :id, :content) do |b|, for: "hoge" %>
-            <div class="checkbox-wrap hoge">
+      <%= f.collection_check_boxes(:user, :point_ids, Point.all, :id, :content) do |b| %>
+            <div class="checkbox-wrap">
               <%= b.label { b.check_box + b.text } %>
             </div>
       <% end %>
