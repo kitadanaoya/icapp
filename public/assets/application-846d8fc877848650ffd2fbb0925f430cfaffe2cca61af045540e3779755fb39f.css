@@ -1,0 +1,125 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/* 一括 */
+
+ul {
+  list-style: none;
+    padding-left: 1em;
+  text-indent: -1em;
+  list-style-position: inside
+}
+
+.rounded {
+ border-radius: 5em; 
+}
+
+
+/* nav */
+.navbar {
+  margin: 0;
+}
+
+.jumbotron {
+  margin: 0;
+}
+
+
+/* footer */
+#ft {
+  border-top: solid 1px #ccc;
+  padding-top: 1.5%;
+}
+
+/* table */
+th {
+  padding-right: 2em;
+}
+
+
+/* gravatar */
+.gravatar {
+  width: 80%;
+}
+
+/* forms */
+.error_explanation {
+ color: red;
+}
+
+.error_explanation ul {
+  color: red;
+ margin: 0 0 30px 0; 
+}
+
+
+/* toppage content */
+#login {
+ margin-bottom: 1.5%; 
+}
+
+
+/*inq*/
+.inqexp {
+  background-color: #fff;
+  border: solid 1px #bbb;
+  box-shadow: #ccc 1px 1px 1px;
+  padding: 2%;
+}
+
+.checkbox-wrap {
+  display: block;
+}
+
+
+
+
+/* users#show */
+table tbody tr th {
+ width: 15%; 
+ text-align: right;
+}
+
+table tbody tr th, table tbody tr td{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.syokai-zentai {
+  margin-top: 2em;
+}
+
+.syokai {
+  display: flex;
+  padding-right: 1em;
+}
+
+.syokai-con {
+ padding: 1.5%;
+ background-color: #fff;
+ margin-bottom: 2em;
+}
+
+.syokai a:hover { 
+  text-decoration: none;
+}
+
+
+.icon {
+ width: 100%;
+ margin: 0;
+ padding: 0;
+}
