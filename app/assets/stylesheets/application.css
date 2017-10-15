@@ -102,7 +102,6 @@ table tbody tr th, table tbody tr td{
 }
 
 .syokai {
-  display: flex;
   padding-right: 1em;
 }
 
@@ -126,10 +125,7 @@ table tbody tr th, table tbody tr td{
 
 
 @media screen and (max-width: 768px) {
-  .syokai {
-    display: block;
-    flex-direction: column;
-  }
+  
   
   .grav {
     width: 50%;
