@@ -126,7 +126,7 @@ table tbody tr th, table tbody tr td{
 
 
 @media screen and (max-width: 768px) {
-  .syokai-zentai {
+  .syokai {
     flex-direction: column;
   }
   
