@@ -31,7 +31,13 @@
       <%= f.password_field :password_confirmation, class: "form-control" %>
     </div>
     
-    <%= render 'layouts/form' %>
+    <div class="form-group">
+      <%= collection_check_boxes(:user, :point_ids, Point.all, :id, :content) do |b| %>
+            <div class="checkbox-wrap">
+              <%= b.label { b.check_box + b.text } %>
+            </div>
+      <% end %>
+    </div>
     
     <%= f.submit "Create My Account", class: "btn btn-primary btn-block" %>
   <% end %>
