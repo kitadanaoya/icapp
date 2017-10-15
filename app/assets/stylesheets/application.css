@@ -122,3 +122,14 @@ table tbody tr th, table tbody tr td{
  margin: 0;
  padding: 0;
 }
+
+
+
+@media screen and (max-width: 400px) {
+  .syokai {
+    flex-direction: column;
+  }
+  
+  .grav {
+    width: 50%;
+}
